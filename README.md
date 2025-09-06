@@ -20,7 +20,7 @@ Built with **Flutter** and **Hive** (local NoSQL database) for fast offline perf
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/my_tasks.git
+git clone https://github.com/mrabhin03/Task-Management-Using-Flutter
 cd my_tasks
 ```
 
