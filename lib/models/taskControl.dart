@@ -1,10 +1,12 @@
-class TaskDetials {
+class TaskDetails {
+  int taskId;
   String title;
   String description;
   DateTime deadline;
   bool isFinished;
 
-  TaskDetials({
+  TaskDetails({
+    required this.taskId,
     required this.title,
     required this.description,
     required this.deadline,
@@ -13,6 +15,7 @@ class TaskDetials {
 
   Map<String, dynamic> toMap() {
     return {
+      'taskId': taskId,
       'title': title,
       'description': description,
       'deadline': deadline.toIso8601String(),
@@ -20,8 +23,9 @@ class TaskDetials {
     };
   }
 
-  factory TaskDetials.fromMap(Map<String, dynamic> map) {
-    return TaskDetials(
+  factory TaskDetails.fromMap(Map<String, dynamic> map) {
+    return TaskDetails(
+      taskId: map['taskId'] ?? DateTime.now().millisecondsSinceEpoch,
       title: map['title'] ?? '',
       description: map['description'] ?? '',
       deadline: DateTime.parse(map['deadline']),
